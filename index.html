@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+    <title>APWG eCX Frequently Asked Questions</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <img src="ecx2-logo.png" width="250" />
-<div id="google_translate_element"></div>
+    <div class="logo">
+        <img   src="ecrimex_logo.png" width="250" />
+        <h1>Frequently Asked Questions (FAQ)</h1>
+<div><p>Select a language to translate this page:</p><div id="google_translate_element"></div>
+    </div></div>
 <script type="text/javascript">
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<p class="font-sans">This document captures a number of commonly asked questions about the APWG eCrime eXchange (eCX) and its operations.
 
-<h1>Frequently Asked Questions (FAQ)</h1>
-<ol>
+</p>
+
+
+<ol class="font-sans">
+    <li><q>How does APWG get their data</q>
+        <p>All of our <span translate=no>phishing URIs, cryptocurrency addresses, and malicious domains</span> are supplied by our member organizations. The APWG does not operate any sensors or gatherers on its 
+        own, with one exception; the <span translate=no>reportphishing</span> module. The <span translate=no>reportphishing</span> feed is a public-facing emailbox that receives reports from non-members and the public at large.
+    The <span translate=no>reportphishing</span> module is processed internally and appropriate data introduced into the other modules.</p>
+    </li>
 <li><q>Are all data records the same?</q>
 <p><b>No</b>. Every record contains a representation of how confident the person who submitted that data is of its maliciousness. The <b>confidence</b> field is one of four values:</p>
 <ul>
-<li><p>100 CF = Manual inspection/confirmation by an APWG member reporter, submitting 
+<li><p><span translate=no>100 CF = </span> inspection/confirmation by an APWG member reporter, submitting 
 data under terms set out in the APWG Data Sharing Agreement.</p></li>
-<li><p>90 CF = Automated inspection/confirmation by Artificial Intelligence or Machine 
+<li><p><span translate=no>90 CF = </span> inspection/discovery by Artificial Intelligence or Machine 
 Learning systems directly curated by an APWG member submitter, under terms set 
 out in the APWG Data Sharing Agreement. Users are encouraged to verify records at this level before just indiscriminately blocking them.</p></li>
-<li><p>50 CF = Machine data-capture or third-party volunteered report without 
-confirmation by APWG member personnel or by a member-curated AI/ML.</p>
-<p>The assumption is that the record 
-has a 50/50 chance of being accurate, therefore requiring user confirmation.</p></li>
-<li><p>0 CF = False positive. We never remove data from the eCX, just remark it.</p></li>
-<p>Users should select the appropriate confidence value when inserting data records and evaluate the value before using the data.</p>
+<li><p><span translate=no>50 CF =</span> Machine data-capture or third-party volunteered report without 
+confirmation by APWG member personnel or by a member-curated AI/ML. The assumption is that the record 
+has a 50/50 chance of being accurate, therefore requiring investigation before use.</p></li>
+<li><p<span translate=no>>0 CF =</span> False positive. The data was reported a phish or malicious site but further investigation decided that it is not.
+</p></li>
 </ul>
+<p>Users should select the appropriate confidence value when inserting data records and evaluate the returned value before using the data.</p>
+<p><b>NOTE:</b> We try to never remove data from the eCX, just remark its confidence and status fields, as removing a record does not infer to other users whether this record is no longer malicious or active.</p>
+
 </li>
     <li><q>How do I mark a data record as a false positive?</q>
 	<p>False positives have a confidence value of 0 (zero). Find the record you wish to modify, double click it, change the confidence to 0, and click update.</p>
     </li>
-    <li><q>I can’t find the data I’m looking for.</q>
-	<p>There are two very different scenarios in this answer. First, people blame the APWG for everything. It’s possible that we don’t have the bad data in our database. If you are sure we have the data send a message to support@ecrimex.net and we’ll investigate.
-Most common is that the database searcher is confused. We have seen this happen with multiple “.” or “-“ in a domain name. For a URI, start with the http:// or https:// adding the domain name a little slower as the searching function researches on every key stroke.</p>
-We have also experienced searching failures when your local web browser has been "updated" but not "restarted". (Really.)</p>
+<li><q>I cannot find the data I am looking for.</q>
+	<p>There are many different scenarios for this answer. </p>
+    <ol><li>First, people blame the APWG for everything. It is possible that we do not have the bad data in our database. If you are sure we have the data send a message to <a href="mailto:support@ecrimex.net">support</a> and we will investigate.</li>
+<li>Second, the most common issue is that the database searcher is confused. We have seen this happen with multiple "."" or "-"" in a domain name or URI. For a URI, start with the http:// or https:// adding the domain name a little slower as the searching function researches on every key stroke.
+<li>Also, we have experienced searching failures when your local web browser has been "updated" but not "restarted". (Really.)</ol></p>
 </li>
 <li><q>Can I get another user invited to the eCX?</q>
 <p>Yes, membership comes with multiple users. Request an invitation via the our <a href="mailto:admin@apwg.org">admin</a> or <a href="mailto:support@ecrimex.net">support</a> addresses.  Likewise, please advise if one of your users has left your operation team or employment so we can reduce the likelihood of an inactive account being breached.</p>

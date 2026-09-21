@@ -1,0 +1,16 @@
+.logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    display: block;
+}
+
+.font-sans {
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+}
+
+q {
+    font-weight: bold;
+}
